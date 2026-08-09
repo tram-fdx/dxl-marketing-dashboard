@@ -1,0 +1,407 @@
+{
+  "date": "2026-08-07",
+  "source": "social",
+  "provenance": "baseline converted from the published social snapshot of 7 Aug 2026",
+  "window": {
+    "en": "Last 28 days: 9 Jul – 5 Aug 2026",
+    "vi": "28 ngày qua: 9/7 – 5/8/2026"
+  },
+  "metrics": [
+    {
+      "channel": "facebook",
+      "metric": "followers",
+      "value": 115,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "views",
+      "value": 4503,
+      "unit": "count",
+      "change_pct": 171.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "viewers",
+      "value": 435,
+      "unit": "count",
+      "change_pct": 51.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "visits",
+      "value": 264,
+      "unit": "count",
+      "change_pct": 388.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "interactions",
+      "value": 155,
+      "unit": "count",
+      "change_pct": 131.3,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "video_3s",
+      "value": 115,
+      "unit": "count",
+      "change_pct": 85.5,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "link_clicks",
+      "value": 17,
+      "unit": "count",
+      "change_pct": 88.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "net_new_followers",
+      "value": 4,
+      "unit": "count",
+      "change_pct": 100,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "views_from_followers_pct",
+      "value": 47.4,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "views_from_non_followers_pct",
+      "value": 52.6,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "interactions_from_followers",
+      "value": 110,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "interactions_from_non_followers",
+      "value": 45,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "watch_time_change_pct",
+      "value": 183.3,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "followers",
+      "value": 44,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "posts_total",
+      "value": 102,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "following",
+      "value": 35,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "views",
+      "value": 897,
+      "unit": "count",
+      "change_pct": 84.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "reach",
+      "value": 194,
+      "unit": "count",
+      "change_pct": 70.2,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "interactions",
+      "value": 60,
+      "unit": "count",
+      "change_pct": 566.7,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "views_from_followers_pct",
+      "value": 52.0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "views_from_non_followers_pct",
+      "value": 48.0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "reach_from_followers",
+      "value": 21,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "reach_from_non_followers",
+      "value": 174,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "interactions_from_followers_pct",
+      "value": 88,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "interactions_from_non_followers_pct",
+      "value": 12,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "subscribers",
+      "value": 4,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "videos",
+      "value": 25,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "videos_long_form",
+      "value": 14,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "videos_shorts",
+      "value": 11,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "views_28d",
+      "value": 28,
+      "unit": "count",
+      "change_pct": 0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "watch_time_hours",
+      "value": 2.4,
+      "unit": "count",
+      "change_pct": 999,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "latest_video_views",
+      "value": 19,
+      "unit": "count",
+      "change_pct": null,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "views_now",
+      "value": 28,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "views_prior",
+      "value": 28,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "followers",
+      "value": 58,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "new_followers_30d",
+      "value": 7,
+      "unit": "count",
+      "change_pct": 250,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "impressions",
+      "value": 1692,
+      "unit": "count",
+      "change_pct": 62.5,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "reactions",
+      "value": 60,
+      "unit": "count",
+      "change_pct": 10.4,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "comments",
+      "value": 0,
+      "unit": "count",
+      "change_pct": 0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "reposts",
+      "value": 2,
+      "unit": "count",
+      "change_pct": 0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "page_views",
+      "value": 46,
+      "unit": "count",
+      "change_pct": 142.1,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "unique_visitors",
+      "value": 22,
+      "unit": "count",
+      "change_pct": 100,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "impressions_prior",
+      "value": 1041,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "impressions_now",
+      "value": 1692,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    }
+  ]
+}

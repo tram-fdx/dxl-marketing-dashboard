@@ -1,0 +1,8 @@
+date,source,channel,metric,value,unit,change_pct,window,note
+2026-08-07,audit,site,avg_load_time,0.86,seconds,,point,11 of 17 core pages under 1s
+2026-08-07,audit,site,crawlability,96,score,,point,
+2026-08-07,audit,site,errors_4xx_5xx,0,count,,point,third consecutive clean day
+2026-08-07,audit,site,overall_score,88,score,,point,+5 vs 5 Aug (83)
+2026-08-07,audit,site,pages_crawled,76,count,,point,sitemap holds at 75 URLs
+2026-08-07,audit,site,performance,92,score,,point,
+2026-08-07,audit,site,structured_data,87,score,,point,

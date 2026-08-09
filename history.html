@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>DX Living — Lịch sử dữ liệu / Data history</title>
+<style>
+:root{--bg:#eef1f6;--card:#fff;--ink:#1f2740;--muted:#7b8496;--line:#e9ecf2;
+  --accent:#5b6bf5;--radius:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5}
+.wrap{max-width:960px;margin:0 auto;padding:22px 22px 60px}
+.en{display:none}
+body.lang-en .vi{display:none}
+body.lang-en .en{display:inline}
+.hd{background:var(--card);border-radius:var(--radius);padding:18px 22px;display:flex;
+  flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;
+  box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+.hd h1{font-size:18px;font-weight:800}
+.hd .sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+.langsw{display:flex;gap:4px;background:#f2f4f9;border-radius:10px;padding:3px}
+.langsw button{border:0;background:transparent;font-family:inherit;font-size:12px;
+  font-weight:800;padding:6px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
+.langsw button.active{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(20,30,60,.1)}
+.day{background:var(--card);border-radius:var(--radius);padding:15px 18px;margin-bottom:10px;
+  box-shadow:0 1px 3px rgba(20,30,60,.06)}
+.day .top{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;justify-content:space-between}
+.day .d{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.day .lab{font-size:12.5px;color:var(--muted);flex:1;min-width:200px}
+.links{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+.links a{font-size:12px;font-weight:700;text-decoration:none;padding:6px 11px;
+  border-radius:9px;border:1px solid var(--line);color:var(--ink);background:#fff}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links a.csv{color:var(--muted)}
+.empty{background:var(--card);border-radius:var(--radius);padding:22px;text-align:center;
+  color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<!--DXLNAV:START-->
+<style>
+#dxlnav{position:fixed;top:0;left:0;right:0;height:48px;z-index:9999;
+  background:#0b1533;display:flex;align-items:center;gap:14px;
+  padding:0 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  box-shadow:0 1px 0 rgba(255,255,255,.06),0 2px 12px rgba(11,21,51,.18)}
+#dxlnav .nb{display:flex;align-items:center;gap:9px;flex:none;text-decoration:none}
+#dxlnav .nb i{width:26px;height:26px;border-radius:8px;flex:none;
+  background:linear-gradient(135deg,#5b6bf5,#22d3ee);display:flex;align-items:center;
+  justify-content:center;color:#fff;font-weight:800;font-size:11px;font-style:normal}
+#dxlnav .nb b{color:#fff;font-size:13px;font-weight:800;letter-spacing:.2px;white-space:nowrap}
+#dxlnav .nt{display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none}
+#dxlnav .nt::-webkit-scrollbar{display:none}
+#dxlnav a.t{color:#9aa6c6;font-size:12.5px;font-weight:700;text-decoration:none;
+  padding:7px 13px;border-radius:9px;white-space:nowrap;transition:.15s}
+#dxlnav a.t:hover{color:#fff;background:rgba(255,255,255,.08)}
+#dxlnav a.t.on{color:#0b1533;background:#fff}
+#dxlnav .nr{margin-left:auto;display:flex;align-items:center;gap:10px;flex:none}
+#dxlnav .nd{color:#6d7ba3;font-size:11px;font-weight:700;white-space:nowrap}
+@media(max-width:820px){#dxlnav .nb b{display:none}#dxlnav .nd{display:none}}
+body{padding-top:48px !important}
+/* social.html keeps a sticky left rail — drop it below the bar */
+.app>.rail{top:48px !important;height:calc(100vh - 48px) !important}
+</style>
+<div id="dxlnav"><a class="nb" href="index.html"><i>DX</i><b>DX Living — Marketing</b></a><div class="nt"><a class="t" href="index.html">Overview</a><a class="t" href="social.html">Social</a><a class="t" href="seo.html">SEO</a><a class="t" href="audit.html">Website Audit</a></div><div class="nr"><span class="nd" id="dxlnavDate"></span></div></div>
+<script>fetch("data/index.json").then(r=>r.json()).then(j=>{var e=document.getElementById("dxlnavDate");if(e&&j.latest)e.textContent="Data: "+j.latest;}).catch(function(){});</script>
+<!--DXLNAV:END-->
+<div class="wrap">
+  <div class="hd">
+    <div>
+      <h1><span class="vi">Lịch sử dữ liệu theo ngày</span><span class="en">Day-by-day data history</span></h1>
+      <div class="sub">
+        <span class="vi">Mỗi ngày một bản đóng băng của cả ba dashboard. Bản cũ không bao giờ bị ghi đè.</span>
+        <span class="en">One frozen copy of all three dashboards per day. Older days are never overwritten.</span>
+      </div>
+    </div>
+    <div class="langsw">
+      <button id="bvi" class="active" onclick="setLang('vi')">VI</button>
+      <button id="ben" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+  <div id="list"><div class="empty"><span class="vi">Đang tải…</span><span class="en">Loading…</span></div></div>
+</div>
+
+<script>
+function setLang(l){
+  document.body.classList.toggle('lang-en', l === 'en');
+  document.documentElement.lang = l;
+  document.getElementById('bvi').classList.toggle('active', l === 'vi');
+  document.getElementById('ben').classList.toggle('active', l === 'en');
+  try{ localStorage.setItem('dxlLang', l); }catch(e){}
+}
+try{ if(localStorage.getItem('dxlLang') === 'en') setLang('en'); }catch(e){}
+
+var NAMES = {social: ['Social', 'Social'], seo: ['SEO', 'SEO'],
+             audit: ['Audit website', 'Website audit']};
+
+fetch('data/index.json', {cache: 'no-store'})
+  .then(function(r){ return r.json(); })
+  .then(function(idx){
+    var days = (idx.snapshots || []).slice().reverse();
+    if(!days.length){
+      document.getElementById('list').innerHTML =
+        '<div class="empty"><span class="vi">Chưa có ngày nào được lưu.</span>' +
+        '<span class="en">No days recorded yet.</span></div>';
+      return;
+    }
+    document.getElementById('list').innerHTML = days.map(function(s){
+      var links = (s.sources || []).map(function(src){
+        var n = NAMES[src] || [src, src];
+        return '<a href="' + s.report[src] + '">' +
+               '<span class="vi">' + n[0] + '</span><span class="en">' + n[1] + '</span></a>';
+      }).join('');
+      var data = (s.sources || []).map(function(src){
+        return '<a class="csv" href="' + s.data[src] + '">' + src + '.json</a>';
+      }).join('');
+      return '<div class="day"><div class="top"><span class="d">' + s.date + '</span>' +
+             '<span class="lab"><span class="vi">' + (s.label_vi || '') + '</span>' +
+             '<span class="en">' + (s.label_en || '') + '</span></span></div>' +
+             '<div class="links">' + links + data + '</div></div>';
+    }).join('');
+  })
+  .catch(function(){
+    document.getElementById('list').innerHTML =
+      '<div class="empty"><span class="vi">Không đọc được data/index.json.</span>' +
+      '<span class="en">Could not read data/index.json.</span></div>';
+  });
+</script>
+</body>
+</html>

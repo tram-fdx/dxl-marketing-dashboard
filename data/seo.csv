@@ -1,0 +1,9 @@
+date,source,channel,metric,value,unit,change_pct,window,note
+2026-08-07,seo,ahrefs,backlinks,372,count,,point,
+2026-08-07,seo,ahrefs,referring_domains,366,count,,point,
+2026-08-07,seo,ga4,engaged_sessions,194,count,,28d,"under-counted, tracking fault from ~29 Jul"
+2026-08-07,seo,ga4,sessions,287,count,,28d,"under-counted, tracking fault from ~29 Jul"
+2026-08-07,seo,gsc,avg_position,29.6,position,,28d,"down from 13.8, wider coverage"
+2026-08-07,seo,gsc,clicks,72,count,53.0,28d,
+2026-08-07,seo,gsc,ctr,5.6,percent,,28d,down from 8.0% in June
+2026-08-07,seo,gsc,impressions,1288,count,119.0,28d,

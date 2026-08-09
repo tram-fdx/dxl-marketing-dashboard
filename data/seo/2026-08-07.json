@@ -1,0 +1,83 @@
+{
+  "date": "2026-08-07",
+  "source": "seo",
+  "provenance": "baseline read from the published SEO report of 7 Aug 2026",
+  "window": {
+    "vi": "28 ngày qua, so với tháng 6",
+    "en": "Last 28 days, compared with June"
+  },
+  "metrics": [
+    {
+      "channel": "gsc",
+      "metric": "clicks",
+      "value": 72,
+      "unit": "count",
+      "change_pct": 53.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "gsc",
+      "metric": "impressions",
+      "value": 1288,
+      "unit": "count",
+      "change_pct": 119.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "gsc",
+      "metric": "ctr",
+      "value": 5.6,
+      "unit": "percent",
+      "change_pct": null,
+      "window": "28d",
+      "note": "down from 8.0% in June"
+    },
+    {
+      "channel": "gsc",
+      "metric": "avg_position",
+      "value": 29.6,
+      "unit": "position",
+      "change_pct": null,
+      "window": "28d",
+      "note": "down from 13.8, wider coverage"
+    },
+    {
+      "channel": "ga4",
+      "metric": "sessions",
+      "value": 287,
+      "unit": "count",
+      "change_pct": null,
+      "window": "28d",
+      "note": "under-counted, tracking fault from ~29 Jul"
+    },
+    {
+      "channel": "ga4",
+      "metric": "engaged_sessions",
+      "value": 194,
+      "unit": "count",
+      "change_pct": null,
+      "window": "28d",
+      "note": "under-counted, tracking fault from ~29 Jul"
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "referring_domains",
+      "value": 366,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "backlinks",
+      "value": 372,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    }
+  ]
+}

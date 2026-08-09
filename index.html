@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>DX Living — Marketing Dashboard</title>
+<style>
+:root{--bg:#eef1f6;--card:#fff;--ink:#1f2740;--muted:#7b8496;--line:#e9ecf2;
+  --pos:#12b76a;--neg:#f04438;--accent:#5b6bf5;--radius:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 22px 60px}
+.en{display:none}
+body.lang-en .vi{display:none}
+body.lang-en .en{display:inline}
+.hd{background:var(--card);border-radius:var(--radius);padding:18px 22px;display:flex;
+  flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;
+  box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+.hd h1{font-size:19px;font-weight:800;letter-spacing:-.2px}
+.hd .sub{font-size:12.5px;color:var(--muted);margin-top:3px}
+.langsw{display:flex;gap:4px;background:#f2f4f9;border-radius:10px;padding:3px}
+.langsw button{border:0;background:transparent;font-family:inherit;font-size:12px;
+  font-weight:800;padding:6px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
+.langsw button.active{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(20,30,60,.1)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.sec{background:var(--card);border-radius:var(--radius);padding:18px 20px;
+  box-shadow:0 1px 3px rgba(20,30,60,.06);border-top:3px solid var(--accent);
+  display:flex;flex-direction:column}
+.sec.s-social{border-top-color:#1877f2}
+.sec.s-seo{border-top-color:#12b76a}
+.sec.s-audit{border-top-color:#c99a3f}
+.sec h2{font-size:14px;font-weight:800;display:flex;align-items:center;gap:8px}
+.sec .note{font-size:11.5px;color:var(--muted);margin:4px 0 14px}
+.mrow{display:flex;align-items:baseline;justify-content:space-between;gap:10px;
+  padding:8px 0;border-bottom:1px dashed var(--line)}
+.mrow:last-of-type{border-bottom:0}
+.mrow .lab{font-size:12.5px;color:var(--muted)}
+.mrow .val{font-size:17px;font-weight:800;font-variant-numeric:tabular-nums}
+.mrow .chg{font-size:11px;font-weight:800;margin-left:6px}
+.chg.up{color:var(--pos)}.chg.down{color:var(--neg)}.chg.flat{color:var(--muted)}
+.go{margin-top:auto;padding-top:14px}
+.go a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;
+  text-decoration:none;color:var(--accent)}
+.go a:hover{text-decoration:underline}
+.how{background:var(--card);border-radius:var(--radius);padding:18px 20px;margin-top:16px;
+  box-shadow:0 1px 3px rgba(20,30,60,.06)}
+.how h2{font-size:14px;font-weight:800;margin-bottom:10px}
+.how ol{margin:0 0 0 18px;font-size:13px;color:#414a63}
+.how li{margin-bottom:6px}
+.how code{background:#f2f4f9;border-radius:5px;padding:1px 6px;font-size:12px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.empty{font-size:12.5px;color:var(--muted);padding:10px 0}
+</style>
+</head>
+<body>
+<!--DXLNAV:START-->
+<style>
+#dxlnav{position:fixed;top:0;left:0;right:0;height:48px;z-index:9999;
+  background:#0b1533;display:flex;align-items:center;gap:14px;
+  padding:0 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  box-shadow:0 1px 0 rgba(255,255,255,.06),0 2px 12px rgba(11,21,51,.18)}
+#dxlnav .nb{display:flex;align-items:center;gap:9px;flex:none;text-decoration:none}
+#dxlnav .nb i{width:26px;height:26px;border-radius:8px;flex:none;
+  background:linear-gradient(135deg,#5b6bf5,#22d3ee);display:flex;align-items:center;
+  justify-content:center;color:#fff;font-weight:800;font-size:11px;font-style:normal}
+#dxlnav .nb b{color:#fff;font-size:13px;font-weight:800;letter-spacing:.2px;white-space:nowrap}
+#dxlnav .nt{display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none}
+#dxlnav .nt::-webkit-scrollbar{display:none}
+#dxlnav a.t{color:#9aa6c6;font-size:12.5px;font-weight:700;text-decoration:none;
+  padding:7px 13px;border-radius:9px;white-space:nowrap;transition:.15s}
+#dxlnav a.t:hover{color:#fff;background:rgba(255,255,255,.08)}
+#dxlnav a.t.on{color:#0b1533;background:#fff}
+#dxlnav .nr{margin-left:auto;display:flex;align-items:center;gap:10px;flex:none}
+#dxlnav .nd{color:#6d7ba3;font-size:11px;font-weight:700;white-space:nowrap}
+@media(max-width:820px){#dxlnav .nb b{display:none}#dxlnav .nd{display:none}}
+body{padding-top:48px !important}
+/* social.html keeps a sticky left rail — drop it below the bar */
+.app>.rail{top:48px !important;height:calc(100vh - 48px) !important}
+</style>
+<div id="dxlnav"><a class="nb" href="index.html"><i>DX</i><b>DX Living — Marketing</b></a><div class="nt"><a class="t on" href="index.html">Overview</a><a class="t" href="social.html">Social</a><a class="t" href="seo.html">SEO</a><a class="t" href="audit.html">Website Audit</a></div><div class="nr"><span class="nd" id="dxlnavDate"></span></div></div>
+<script>fetch("data/index.json").then(r=>r.json()).then(j=>{var e=document.getElementById("dxlnavDate");if(e&&j.latest)e.textContent="Data: "+j.latest;}).catch(function(){});</script>
+<!--DXLNAV:END-->
+<div class="wrap">
+
+  <div class="hd">
+    <div>
+      <h1>DX Living — <span class="vi">Bảng điều khiển Marketing</span><span class="en">Marketing Dashboard</span></h1>
+      <div class="sub">
+        <span class="vi">Social · SEO · Audit website — cập nhật tự động mỗi ngày</span>
+        <span class="en">Social · SEO · Website audit — updated automatically every day</span>
+        <span id="asOf"></span>
+      </div>
+    </div>
+    <div class="langsw">
+      <button id="bvi" class="active" onclick="setLang('vi')">VI</button>
+      <button id="ben" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <section class="sec s-social">
+      <h2><span class="vi">Social</span><span class="en">Social</span></h2>
+      <div class="note">
+        <span class="vi">Facebook · Instagram · YouTube · LinkedIn — 28 ngày gần nhất</span>
+        <span class="en">Facebook · Instagram · YouTube · LinkedIn — last 28 days</span>
+      </div>
+      <div id="mSocial"><div class="empty vi">Đang tải…</div><div class="empty en">Loading…</div></div>
+      <div class="go"><a href="social.html"><span class="vi">Mở dashboard Social →</span><span class="en">Open the Social dashboard →</span></a></div>
+    </section>
+
+    <section class="sec s-seo">
+      <h2>SEO</h2>
+      <div class="note">
+        <span class="vi">Google Search Console · GA4 · Ahrefs — 28 ngày gần nhất</span>
+        <span class="en">Google Search Console · GA4 · Ahrefs — last 28 days</span>
+      </div>
+      <div id="mSeo"><div class="empty vi">Đang tải…</div><div class="empty en">Loading…</div></div>
+      <div class="go"><a href="seo.html"><span class="vi">Mở báo cáo SEO →</span><span class="en">Open the SEO report →</span></a></div>
+    </section>
+
+    <section class="sec s-audit">
+      <h2><span class="vi">Audit website</span><span class="en">Website audit</span></h2>
+      <div class="note">
+        <span class="vi">Sức khoẻ kỹ thuật của dxliving.com — lần quét gần nhất</span>
+        <span class="en">Technical health of dxliving.com — most recent crawl</span>
+      </div>
+      <div id="mAudit"><div class="empty vi">Đang tải…</div><div class="empty en">Loading…</div></div>
+      <div class="go"><a href="audit.html"><span class="vi">Mở dashboard Audit →</span><span class="en">Open the Audit dashboard →</span></a></div>
+    </section>
+  </div>
+
+  <div class="how">
+    <h2><span class="vi">Dữ liệu đi từ đâu tới đâu</span><span class="en">How the data flows</span></h2>
+    <ol>
+      <li><span class="vi">Mỗi sáng, tác vụ tự động đọc số từ Facebook, Instagram, YouTube, LinkedIn, Search Console, GA4, Ahrefs và quét lại website.</span><span class="en">Each morning the scheduled task reads Facebook, Instagram, YouTube, LinkedIn, Search Console, GA4 and Ahrefs, then re-crawls the site.</span></li>
+      <li><span class="vi">Số liệu được ghi thành <code>data/&lt;mảng&gt;/&lt;ngày&gt;.json</code> rồi gộp lại thành <code>data/social.csv</code>, <code>data/seo.csv</code>, <code>data/audit.csv</code>.</span><span class="en">The numbers are written to <code>data/&lt;source&gt;/&lt;date&gt;.json</code>, then rolled up into <code>data/social.csv</code>, <code>data/seo.csv</code> and <code>data/audit.csv</code>.</span></li>
+      <li><span class="vi">Google Sheets hút thẳng các file CSV đó bằng <code>IMPORTDATA</code> — mở sheet là thấy số mới, không phải làm gì thêm.</span><span class="en">Google Sheets pulls those CSVs with <code>IMPORTDATA</code> — open the sheet and the latest numbers are already there.</span></li>
+      <li><span class="vi">Bản HTML của ngày hôm đó được đóng băng vào <code>archive/&lt;ngày&gt;/</code> để xem lại lịch sử.</span><span class="en">That day's HTML is frozen into <code>archive/&lt;date&gt;/</code> so history stays readable.</span></li>
+    </ol>
+  </div>
+
+</div>
+
+<script>
+function setLang(l){
+  document.body.classList.toggle('lang-en', l === 'en');
+  document.documentElement.lang = l;
+  document.getElementById('bvi').classList.toggle('active', l === 'vi');
+  document.getElementById('ben').classList.toggle('active', l === 'en');
+  try{ localStorage.setItem('dxlLang', l); }catch(e){}
+}
+try{ if(localStorage.getItem('dxlLang') === 'en') setLang('en'); }catch(e){}
+
+var LABELS = {
+  'facebook.views':        ['Facebook — lượt xem', 'Facebook — views'],
+  'facebook.interactions': ['Facebook — tương tác', 'Facebook — interactions'],
+  'facebook.followers':    ['Facebook — follower', 'Facebook — followers'],
+  'instagram.reach':       ['Instagram — tiếp cận', 'Instagram — reach'],
+  'instagram.followers':   ['Instagram — follower', 'Instagram — followers'],
+  'linkedin.impressions':  ['LinkedIn — hiển thị', 'LinkedIn — impressions'],
+  'youtube.views_28d':     ['YouTube — lượt xem 28 ngày', 'YouTube — views, 28 days'],
+  'gsc.clicks':            ['Clicks (GSC)', 'Clicks (GSC)'],
+  'gsc.impressions':       ['Impressions (GSC)', 'Impressions (GSC)'],
+  'gsc.ctr':               ['CTR trung bình', 'Average CTR'],
+  'gsc.avg_position':      ['Vị trí trung bình', 'Average position'],
+  'ga4.sessions':          ['Sessions (GA4)', 'Sessions (GA4)'],
+  'ahrefs.referring_domains': ['Referring domains', 'Referring domains'],
+  'site.overall_score':    ['Điểm tổng', 'Overall score'],
+  'site.pages_crawled':    ['Số trang đã quét', 'Pages crawled'],
+  'site.avg_load_time':    ['Thời gian tải trung bình', 'Average load time'],
+  'site.errors_4xx_5xx':   ['Lỗi 4xx/5xx', '4xx/5xx errors'],
+  'site.performance':      ['Performance', 'Performance']
+};
+
+var PICK = {
+  social: ['facebook.views','facebook.interactions','instagram.reach','linkedin.impressions','youtube.views_28d'],
+  seo:    ['gsc.clicks','gsc.impressions','gsc.ctr','gsc.avg_position','ahrefs.referring_domains'],
+  audit:  ['site.overall_score','site.pages_crawled','site.avg_load_time','site.performance','site.errors_4xx_5xx']
+};
+
+function fmt(v, unit){
+  if(v === null || v === undefined || v === '') return '—';
+  if(unit === 'percent') return v + '%';
+  if(unit === 'seconds') return v + 's';
+  if(unit === 'score')   return v;
+  if(typeof v === 'number') return v.toLocaleString('en-US');
+  return v;
+}
+
+function delta(p){
+  if(p === null || p === undefined || p === '') return '';
+  var n = Number(p);
+  if(!isFinite(n) || n === 0) return '<span class="chg flat">=</span>';
+  var cls = n > 0 ? 'up' : 'down';
+  return '<span class="chg ' + cls + '">' + (n > 0 ? '▲ +' : '▼ ') + n + '%</span>';
+}
+
+function paint(elId, snap, keys){
+  var el = document.getElementById(elId);
+  if(!snap || !snap.metrics){
+    el.innerHTML = '<div class="empty"><span class="vi">Chưa có dữ liệu cho ngày này.</span>' +
+                   '<span class="en">No data for this date yet.</span></div>';
+    return;
+  }
+  var by = {};
+  snap.metrics.forEach(function(m){ by[m.channel + '.' + m.metric] = m; });
+  var html = keys.map(function(k){
+    var m = by[k];
+    if(!m) return '';
+    var lab = LABELS[k] || [k, k];
+    return '<div class="mrow"><span class="lab">' +
+           '<span class="vi">' + lab[0] + '</span><span class="en">' + lab[1] + '</span></span>' +
+           '<span class="val">' + fmt(m.value, m.unit) + delta(m.change_pct) + '</span></div>';
+  }).join('');
+  el.innerHTML = html || '<div class="empty"><span class="vi">Chưa có chỉ số nào khớp.</span>' +
+                         '<span class="en">No matching metrics.</span></div>';
+}
+
+fetch('data/index.json')
+  .then(function(r){ return r.json(); })
+  .then(function(idx){
+    var d = idx.latest;
+    document.getElementById('asOf').textContent = d ? ' · ' + d : '';
+    ['social','seo','audit'].forEach(function(src){
+      var id = 'm' + src.charAt(0).toUpperCase() + src.slice(1);
+      fetch('data/' + src + '/' + d + '.json')
+        .then(function(r){ return r.ok ? r.json() : null; })
+        .then(function(snap){ paint(id, snap, PICK[src]); })
+        .catch(function(){ paint(id, null, PICK[src]); });
+    });
+  })
+  .catch(function(){
+    ['mSocial','mSeo','mAudit'].forEach(function(id){ paint(id, null, []); });
+  });
+</script>
+</body>
+</html>

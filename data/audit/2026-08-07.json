@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-07",
+  "source": "audit",
+  "provenance": "baseline read from the published technical audit dashboard of 7 Aug 2026",
+  "window": {
+    "vi": "Lần quét ngày 7/8/2026",
+    "en": "Crawl of 7 Aug 2026"
+  },
+  "metrics": [
+    {
+      "channel": "site",
+      "metric": "overall_score",
+      "value": 88,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": "+5 vs 5 Aug (83)"
+    },
+    {
+      "channel": "site",
+      "metric": "pages_crawled",
+      "value": 76,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "sitemap holds at 75 URLs"
+    },
+    {
+      "channel": "site",
+      "metric": "avg_load_time",
+      "value": 0.86,
+      "unit": "seconds",
+      "change_pct": null,
+      "window": "point",
+      "note": "11 of 17 core pages under 1s"
+    },
+    {
+      "channel": "site",
+      "metric": "crawlability",
+      "value": 96,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "structured_data",
+      "value": 87,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "performance",
+      "value": 92,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "errors_4xx_5xx",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "third consecutive clean day"
+    }
+  ]
+}

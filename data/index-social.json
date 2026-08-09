@@ -1,0 +1,13 @@
+{
+  "site": "DX Living — social",
+  "latest": "2026-08-07",
+  "snapshots": [
+    {
+      "date": "2026-08-07",
+      "data": "data/social/2026-08-07.json",
+      "report": "archive/2026-08-07/social.html",
+      "label_vi": "Baseline: FB views 4.503 · GSC clicks 72 · điểm audit 88/100",
+      "label_en": "Baseline: FB views 4,503 · GSC clicks 72 · audit score 88/100"
+    }
+  ]
+}
