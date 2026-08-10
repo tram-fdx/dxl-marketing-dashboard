@@ -46,9 +46,19 @@ và Chrome trên máy. Không dùng API trả phí.
   "metrics": [
     {"channel": "gsc", "metric": "clicks", "value": 72,
      "unit": "count", "change_pct": 53.0, "window": "28d", "note": ""}
+  ],
+  "insights": [
+    {"level": "good", "vi": "…", "en": "…"}
   ]
 }
 ```
+
+`insights` hiện thành khối **Nhận định** trên trang Overview. `level` là
+`good` / `warn` / `bad` / `info`. Không có thì trang tự suy ra hai mức biến động
+lớn nhất và ghi rõ là số tự suy.
+
+Một mảng không chạy trong ngày thì **không ghi snapshot rỗng** — thẻ trên Overview
+tự lùi về ngày gần nhất mảng đó có, kèm dòng "chưa quét lại hôm nay".
 
 Cột CSV cố định: `date, source, channel, metric, value, unit, change_pct, window, note`.
 **Không đổi thứ tự** — công thức trong Google Sheet tham chiếu theo vị trí cột.

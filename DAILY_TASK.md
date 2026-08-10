@@ -81,6 +81,19 @@ Ba file, đúng shape trong `README.md`:
 Mỗi metric là một dòng phẳng: `channel, metric, value, unit, change_pct, window, note`.
 Validate cả ba bằng `python3 -m json.tool`.
 
+**Bắt buộc có `insights`** — 2–4 nhận định mỗi mảng, song ngữ, hiện trên trang Overview:
+
+```json
+"insights": [
+  {"level": "good", "vi": "<b>Facebook</b> …", "en": "<b>Facebook</b> …"}
+]
+```
+
+`level` là `good` / `warn` / `bad` / `info`. Viết nhận định nói **điều gì đang xảy ra
+và vì sao**, không lặp lại con số đã có ở trên. Cảnh báo khi phần trăm đánh lừa
+(vd. +842% nhưng nền chỉ từ 7 lên 66). Không có `insights` thì trang tự suy ra
+mức biến động lớn nhất — dùng được nhưng nhạt, đừng để rơi vào đó.
+
 ─────────────────────────────
 BƯỚC 4 — Cập nhật số hiển thị trên 3 trang HTML
 
