@@ -21,7 +21,9 @@ def build(repo: pathlib.Path) -> None:
     for source in SOURCES:
         rows = []
         folder = repo / "data" / source
-        for path in sorted(folder.glob("*.json")):
+        # *.pages.json is the raw per-URL dump that sits beside an audit
+        # snapshot — a list, not a snapshot, and not part of the CSV.
+        for path in sorted(p for p in folder.glob("*.json") if not p.name.endswith(".pages.json")):
             try:
                 rows.extend(snapshot_rows(read_snapshot(path)))
             except Exception as exc:  # a bad snapshot must not kill the whole build

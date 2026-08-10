@@ -1,0 +1,123 @@
+{
+  "date": "2026-08-10",
+  "source": "audit",
+  "provenance": "live crawl of dxliving.com sitemap, each URL fetched twice and the better TTFB kept. Sub-scores are recomputed from measured ratios with the weights printed on the dashboard (crawl 25 / perf 25 / schema 20 / on-page 15 / content 15) — the 7 Aug sub-scores were assigned by hand, so compare the measured inputs rather than the composite across those two days.",
+  "window": {
+    "vi": "Lần quét ngày 2026-08-10",
+    "en": "Crawl of 2026-08-10"
+  },
+  "metrics": [
+    {
+      "channel": "site",
+      "metric": "overall_score",
+      "value": 92,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": "raw 91.6"
+    },
+    {
+      "channel": "site",
+      "metric": "pages_crawled",
+      "value": 77,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "avg_load_time",
+      "value": 0.68,
+      "unit": "seconds",
+      "change_pct": null,
+      "window": "point",
+      "note": "73/77 pages under 1s; slowest 1.39s"
+    },
+    {
+      "channel": "site",
+      "metric": "crawlability",
+      "value": 100,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "performance",
+      "value": 95,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "structured_data",
+      "value": 99,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": "76/77 pages carry JSON-LD"
+    },
+    {
+      "channel": "site",
+      "metric": "on_page",
+      "value": 67,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "content",
+      "value": 87,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": "10 pages under 300 words"
+    },
+    {
+      "channel": "site",
+      "metric": "errors_4xx_5xx",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "articles",
+      "value": 55,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "average 2202 words"
+    }
+  ],
+  "insights": [
+    {
+      "level": "good",
+      "vi": "<b>Tốc độ cải thiện thật.</b> TTFB trung bình toàn site 0,79s → 0,68s và số trang dưới 1 giây tăng 69/76 → 73/77. Trang chậm nhất giờ là <code>/model</code> ở 1,39s — không còn trang nào trên 1,5s.",
+      "en": "<b>Speed genuinely improved.</b> Site-wide average TTFB went 0.79s → 0.68s and pages under one second rose from 69/76 to 73/77. The slowest page is now <code>/model</code> at 1.39s — nothing sits above 1.5s."
+    },
+    {
+      "level": "good",
+      "vi": "<b>77/77 trang trả 200</b>, 0 timeout, 0 lỗi 4xx/5xx. Sitemap tăng 75 → 77 URL (thêm 2 bài). Chỉ <code>/start-interactive</code> còn thiếu JSON-LD.",
+      "en": "<b>All 77 pages return 200</b>, no timeouts, no 4xx/5xx. The sitemap grew from 75 to 77 URLs (two new articles). Only <code>/start-interactive</code> still lacks JSON-LD."
+    },
+    {
+      "level": "bad",
+      "vi": "<b>Cấu trúc heading hỏng gần như toàn site: chỉ 1/77 trang có thứ bậc đúng.</b> 76 trang còn lại nhảy bậc (vd. h2 → h4). Đây là lỗi lớn nhất còn lại và là thứ kéo điểm On-page xuống 67.",
+      "en": "<b>Heading structure is broken almost site-wide: only 1 of 77 pages has a clean hierarchy.</b> The other 76 skip levels (h2 straight to h4). This is the largest defect left, and what holds the On-page score at 67."
+    },
+    {
+      "level": "warn",
+      "vi": "<b>78/606 ảnh vẫn thiếu alt</b> và chỉ 215/606 ảnh có lazy-load. Cùng với 10 trang dưới 300 từ, đây là nhóm việc nhỏ nhưng gọn, làm một buổi là xong.",
+      "en": "<b>78 of 606 images still have no alt text</b> and only 215 carry lazy-loading. Together with 10 pages under 300 words, this is a small, self-contained batch — one session's work."
+    }
+  ]
+}

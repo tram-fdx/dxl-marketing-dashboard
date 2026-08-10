@@ -58,6 +58,16 @@ date,source,channel,metric,value,unit,change_pct,window,note
 2026-08-07,social,youtube,views_now,28,count,,point,
 2026-08-07,social,youtube,views_prior,28,count,,point,
 2026-08-07,social,youtube,watch_time_hours,2.4,count,999,28d,
+2026-08-10,audit,site,articles,55,count,,point,average 2202 words
+2026-08-10,audit,site,avg_load_time,0.68,seconds,,point,73/77 pages under 1s; slowest 1.39s
+2026-08-10,audit,site,content,87,score,,point,10 pages under 300 words
+2026-08-10,audit,site,crawlability,100,score,,point,
+2026-08-10,audit,site,errors_4xx_5xx,0,count,,point,
+2026-08-10,audit,site,on_page,67,score,,point,
+2026-08-10,audit,site,overall_score,92,score,,point,raw 91.6
+2026-08-10,audit,site,pages_crawled,77,count,,point,
+2026-08-10,audit,site,performance,95,score,,point,
+2026-08-10,audit,site,structured_data,99,score,,point,76/77 pages carry JSON-LD
 2026-08-10,seo,ahrefs,backlinks,401,count,,point,372 ngày 7/8 / was 372 on 7 Aug
 2026-08-10,seo,ahrefs,domain_rating,0,score,,point,
 2026-08-10,seo,ahrefs,organic_keywords,0,count,,point,
