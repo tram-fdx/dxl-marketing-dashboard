@@ -41,6 +41,17 @@ body.lang-en .en{display:inline}
 .mrow .val{font-size:17px;font-weight:800;font-variant-numeric:tabular-nums}
 .mrow .chg{font-size:11px;font-weight:800;margin-left:6px}
 .chg.up{color:var(--pos)}.chg.down{color:var(--neg)}.chg.flat{color:var(--muted)}
+.ins{margin-top:14px}
+.ins h3{font-size:10.5px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:8px}
+.ins ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.ins li{font-size:12.5px;line-height:1.45;padding:8px 10px 8px 11px;border-radius:8px;
+  background:#f7f8fb;border-left:3px solid var(--muted);color:#3a4257}
+.ins li.good{border-left-color:var(--pos);background:#f2fbf6}
+.ins li.warn{border-left-color:#f79009;background:#fff9f0}
+.ins li.bad{border-left-color:var(--neg);background:#fef4f3}
+.ins li b{font-weight:800;color:var(--ink)}
+.ins .src{font-size:10.5px;color:var(--muted);margin-top:7px;font-style:italic}
 .go{margin-top:auto;padding-top:14px}
 .go a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;
   text-decoration:none;color:var(--accent)}
@@ -108,6 +119,7 @@ body{padding-top:48px !important}
         <span class="en">Facebook · Instagram · YouTube · LinkedIn — last 28 days</span>
       </div>
       <div id="mSocial"><div class="empty vi">Đang tải…</div><div class="empty en">Loading…</div></div>
+      <div class="ins" id="iSocial"></div>
       <div class="go"><a href="social.html"><span class="vi">Mở dashboard Social →</span><span class="en">Open the Social dashboard →</span></a></div>
     </section>
 
@@ -118,6 +130,7 @@ body{padding-top:48px !important}
         <span class="en">Google Search Console · GA4 · Ahrefs — last 28 days</span>
       </div>
       <div id="mSeo"><div class="empty vi">Đang tải…</div><div class="empty en">Loading…</div></div>
+      <div class="ins" id="iSeo"></div>
       <div class="go"><a href="seo.html"><span class="vi">Mở báo cáo SEO →</span><span class="en">Open the SEO report →</span></a></div>
     </section>
 
@@ -128,6 +141,7 @@ body{padding-top:48px !important}
         <span class="en">Technical health of dxliving.com — most recent crawl</span>
       </div>
       <div id="mAudit"><div class="empty vi">Đang tải…</div><div class="empty en">Loading…</div></div>
+      <div class="ins" id="iAudit"></div>
       <div class="go"><a href="audit.html"><span class="vi">Mở dashboard Audit →</span><span class="en">Open the Audit dashboard →</span></a></div>
     </section>
   </div>
@@ -219,21 +233,82 @@ function paint(elId, snap, keys){
                          '<span class="en">No matching metrics.</span></div>';
 }
 
+// Insights are written into the snapshot by whoever read the numbers — a
+// judgement about what the movement means, not something derivable from the
+// figures. When a snapshot carries none, fall back to naming the biggest
+// mover so the block is never silently empty.
+function derive(snap, keys){
+  if(!snap || !snap.metrics) return [];
+  var moved = snap.metrics.filter(function(m){
+    return m.change_pct !== null && m.change_pct !== undefined && m.change_pct !== '' &&
+           isFinite(Number(m.change_pct)) && Number(m.change_pct) !== 0;
+  }).sort(function(a, b){ return Math.abs(Number(b.change_pct)) - Math.abs(Number(a.change_pct)); });
+  return moved.slice(0, 2).map(function(m){
+    var n = Number(m.change_pct), up = n > 0;
+    var name = (LABELS[m.channel + '.' + m.metric] || [m.channel + ' ' + m.metric, m.channel + ' ' + m.metric]);
+    return {
+      level: up ? 'good' : 'warn',
+      vi: '<b>' + name[0] + '</b> ' + (up ? 'tăng' : 'giảm') + ' ' + Math.abs(n) + '% so với kỳ trước.',
+      en: '<b>' + name[1] + '</b> ' + (up ? 'up' : 'down') + ' ' + Math.abs(n) + '% versus the previous period.'
+    };
+  });
+}
+
+function insight(elId, snap, keys){
+  var el = document.getElementById(elId);
+  if(!el) return;
+  var items = (snap && snap.insights && snap.insights.length) ? snap.insights : derive(snap, keys);
+  var authored = !!(snap && snap.insights && snap.insights.length);
+  if(!items.length){
+    el.innerHTML = '<h3><span class="vi">Nhận định</span><span class="en">Insight</span></h3>' +
+      '<ul><li><span class="vi">Chưa đủ dữ liệu để so sánh — cần ít nhất hai ngày.</span>' +
+      '<span class="en">Not enough data to compare yet — two days are needed.</span></li></ul>';
+    return;
+  }
+  el.innerHTML = '<h3><span class="vi">Nhận định</span><span class="en">Insight</span></h3><ul>' +
+    items.map(function(i){
+      return '<li class="' + (i.level || 'info') + '">' +
+             '<span class="vi">' + i.vi + '</span><span class="en">' + i.en + '</span></li>';
+    }).join('') + '</ul>' +
+    (authored ? '' :
+      '<div class="src"><span class="vi">Tự suy ra từ mức biến động lớn nhất.</span>' +
+      '<span class="en">Derived from the largest movements.</span></div>');
+}
+
+// Sources do not all run every day — the site audit is a full crawl and runs
+// less often than the social read. Each card therefore shows the newest day
+// that source actually has, and says so when that is not the latest day.
+function latestFor(idx, src){
+  for(var i = idx.snapshots.length - 1; i >= 0; i--){
+    var s = idx.snapshots[i];
+    if((s.sources || []).indexOf(src) !== -1) return s.date;
+  }
+  return null;
+}
+
 fetch('data/index.json')
   .then(function(r){ return r.json(); })
   .then(function(idx){
-    var d = idx.latest;
-    document.getElementById('asOf').textContent = d ? ' · ' + d : '';
+    document.getElementById('asOf').textContent = idx.latest ? ' · ' + idx.latest : '';
     ['social','seo','audit'].forEach(function(src){
-      var id = 'm' + src.charAt(0).toUpperCase() + src.slice(1);
+      var cap = src.charAt(0).toUpperCase() + src.slice(1);
+      var d = latestFor(idx, src);
+      if(d && d !== idx.latest){
+        var note = document.querySelector('.s-' + src + ' .note');
+        if(note) note.innerHTML += '<br><span class="vi">Số của ngày ' + d + ' — chưa quét lại hôm nay.</span>' +
+                                   '<span class="en">Figures from ' + d + ' — not re-run today.</span>';
+      }
+      if(!d){ paint('m' + cap, null, PICK[src]); insight('i' + cap, null, PICK[src]); return; }
       fetch('data/' + src + '/' + d + '.json')
         .then(function(r){ return r.ok ? r.json() : null; })
-        .then(function(snap){ paint(id, snap, PICK[src]); })
-        .catch(function(){ paint(id, null, PICK[src]); });
+        .then(function(snap){ paint('m' + cap, snap, PICK[src]); insight('i' + cap, snap, PICK[src]); })
+        .catch(function(){ paint('m' + cap, null, PICK[src]); insight('i' + cap, null, PICK[src]); });
     });
   })
   .catch(function(){
-    ['mSocial','mSeo','mAudit'].forEach(function(id){ paint(id, null, []); });
+    ['Social','Seo','Audit'].forEach(function(cap){
+      paint('m' + cap, null, []); insight('i' + cap, null, []);
+    });
   });
 </script>
 </body>

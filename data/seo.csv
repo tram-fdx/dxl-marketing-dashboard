@@ -7,3 +7,16 @@ date,source,channel,metric,value,unit,change_pct,window,note
 2026-08-07,seo,gsc,clicks,72,count,53.0,28d,
 2026-08-07,seo,gsc,ctr,5.6,percent,,28d,down from 8.0% in June
 2026-08-07,seo,gsc,impressions,1288,count,119.0,28d,
+2026-08-10,seo,ahrefs,backlinks,401,count,,point,372 ngày 7/8 / was 372 on 7 Aug
+2026-08-10,seo,ahrefs,domain_rating,0,score,,point,
+2026-08-10,seo,ahrefs,organic_keywords,0,count,,point,
+2026-08-10,seo,ahrefs,referring_domains,395,count,,point,366 ngày 7/8 / was 366 on 7 Aug
+2026-08-10,seo,ai,ai_overview_responses,0,count,,point,
+2026-08-10,seo,ai,chatgpt_responses,10,count,,point,3 trang được trích / 3 pages cited
+2026-08-10,seo,ai,copilot_responses,8,count,,point,2 trang được trích / 2 pages cited
+2026-08-10,seo,ai,gemini_responses,0,count,,point,
+2026-08-10,seo,ai,perplexity_responses,0,count,,point,
+2026-08-10,seo,gsc,avg_position,29.2,position,,28d,tốt hơn 29.6 ngày 7/8 / better than 29.6 on 7 Aug
+2026-08-10,seo,gsc,clicks,74,count,,28d,
+2026-08-10,seo,gsc,ctr,5.5,percent,,28d,
+2026-08-10,seo,gsc,impressions,1340,count,,28d,"GSC hiển thị 1.34K — đã làm tròn / GSC displays 1.34K, rounded"

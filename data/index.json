@@ -1,7 +1,7 @@
 {
   "site": "DX Living — Marketing Dashboard",
   "description": "Social / SEO / Website audit. One snapshot set per day.",
-  "latest": "2026-08-07",
+  "latest": "2026-08-10",
   "snapshots": [
     {
       "date": "2026-08-07",
@@ -22,6 +22,24 @@
       },
       "label_vi": "Baseline: FB views 4.503 · GSC clicks 72 · điểm audit 88/100",
       "label_en": "Baseline: FB views 4,503 · GSC clicks 72 · audit score 88/100"
+    },
+    {
+      "date": "2026-08-10",
+      "sources": [
+        "social",
+        "seo"
+      ],
+      "data": {
+        "social": "data/social/2026-08-10.json",
+        "seo": "data/seo/2026-08-10.json"
+      },
+      "report": {
+        "social": "archive/2026-08-10/social.html",
+        "seo": "archive/2026-08-10/seo.html",
+        "audit": "archive/2026-08-10/audit.html"
+      },
+      "label_vi": "FB views 4.777 (+170%) · lần đầu đo được AI citations (ChatGPT 10, Copilot 8) · refdomains 366→395",
+      "label_en": "FB views 4,777 (+170%) · first measurable AI citations (ChatGPT 10, Copilot 8) · refdomains 366→395"
     }
   ]
 }

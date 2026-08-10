@@ -1,0 +1,150 @@
+{
+  "date": "2026-08-10",
+  "source": "seo",
+  "provenance": "GSC and Ahrefs read live in Chrome on 10 Aug 2026; GA4 not re-read today because collection has been faulty since ~29 Jul",
+  "window": {
+    "vi": "GSC: 28 ngày tới 7/8/2026 · Ahrefs: số tại thời điểm 10/8",
+    "en": "GSC: 28 days to 7 Aug 2026 · Ahrefs: as at 10 Aug"
+  },
+  "metrics": [
+    {
+      "channel": "gsc",
+      "metric": "clicks",
+      "value": 74,
+      "unit": "count",
+      "change_pct": null,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "gsc",
+      "metric": "impressions",
+      "value": 1340,
+      "unit": "count",
+      "change_pct": null,
+      "window": "28d",
+      "note": "GSC hiển thị 1.34K — đã làm tròn / GSC displays 1.34K, rounded"
+    },
+    {
+      "channel": "gsc",
+      "metric": "ctr",
+      "value": 5.5,
+      "unit": "percent",
+      "change_pct": null,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "gsc",
+      "metric": "avg_position",
+      "value": 29.2,
+      "unit": "position",
+      "change_pct": null,
+      "window": "28d",
+      "note": "tốt hơn 29.6 ngày 7/8 / better than 29.6 on 7 Aug"
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "referring_domains",
+      "value": 395,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "366 ngày 7/8 / was 366 on 7 Aug"
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "backlinks",
+      "value": 401,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "372 ngày 7/8 / was 372 on 7 Aug"
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "domain_rating",
+      "value": 0,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "organic_keywords",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "ai",
+      "metric": "chatgpt_responses",
+      "value": 10,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "3 trang được trích / 3 pages cited"
+    },
+    {
+      "channel": "ai",
+      "metric": "copilot_responses",
+      "value": 8,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "2 trang được trích / 2 pages cited"
+    },
+    {
+      "channel": "ai",
+      "metric": "ai_overview_responses",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "ai",
+      "metric": "gemini_responses",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "ai",
+      "metric": "perplexity_responses",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    }
+  ],
+  "insights": [
+    {
+      "level": "good",
+      "vi": "<b>Lần đầu đo được hiện diện trên AI.</b> Ahrefs ghi nhận ChatGPT trích DX Living trong 10 câu trả lời (3 trang) và Copilot 8 câu (2 trang). Báo cáo 7/8 còn ghi '0 prompt được track'.",
+      "en": "<b>AI visibility is measurable for the first time.</b> Ahrefs records DX Living cited in 10 ChatGPT responses across 3 pages, and 8 Copilot responses across 2. The 7 Aug report still read '0 prompts tracked'."
+    },
+    {
+      "level": "good",
+      "vi": "<b>Backlink tăng nhanh:</b> referring domains 366 → 395 và backlinks 372 → 401 chỉ trong 3 ngày. Nhưng Domain Rating vẫn 0 — link mới chưa đủ chất lượng để đẩy DR.",
+      "en": "<b>Backlinks are accumulating fast:</b> referring domains 366 → 395 and backlinks 372 → 401 in three days. Domain Rating is still 0, so the new links are not yet strong enough to move it."
+    },
+    {
+      "level": "bad",
+      "vi": "<b>0 từ khoá organic và 0 organic traffic theo Ahrefs</b>, trong khi GSC vẫn ghi nhận 74 clicks. Chênh lệch này nghĩa là site đang xuất hiện ở vị trí trung bình 29.2 — quá sâu để Ahrefs tính là có thứ hạng.",
+      "en": "<b>Ahrefs shows 0 organic keywords and 0 organic traffic</b> while GSC still records 74 clicks. The gap says the site is surfacing at an average position of 29.2 — too deep for Ahrefs to count it as ranking."
+    },
+    {
+      "level": "warn",
+      "vi": "<b>GA4 chưa đọc lại hôm nay</b> vì lỗi thu thập từ ~29/7 vẫn chưa được xác nhận đã sửa. Số session trên dashboard vẫn là của ngày 7/8.",
+      "en": "<b>GA4 was not re-read today</b> — the collection fault from ~29 Jul has not been confirmed fixed. The session figures on the dashboard are still those of 7 Aug."
+    }
+  ]
+}

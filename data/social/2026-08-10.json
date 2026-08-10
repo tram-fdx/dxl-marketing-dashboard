@@ -1,0 +1,280 @@
+{
+  "date": "2026-08-10",
+  "source": "social",
+  "provenance": "read live in Chrome on 10 Aug 2026; Meta and YouTube report the 28 days to 8 Aug, LinkedIn the 30 days to 8 Aug",
+  "window": {
+    "vi": "28 ngày: 12/7 – 8/8/2026 (LinkedIn: 10/7 – 8/8)",
+    "en": "28 days: 12 Jul – 8 Aug 2026 (LinkedIn: 10 Jul – 8 Aug)"
+  },
+  "metrics": [
+    {
+      "channel": "facebook",
+      "metric": "followers",
+      "value": 115,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "views",
+      "value": 4777,
+      "unit": "count",
+      "change_pct": 169.7,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "viewers",
+      "value": 441,
+      "unit": "count",
+      "change_pct": 50.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "visits",
+      "value": 271,
+      "unit": "count",
+      "change_pct": 411.3,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "interactions",
+      "value": 168,
+      "unit": "count",
+      "change_pct": 140.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "video_3s",
+      "value": 113,
+      "unit": "count",
+      "change_pct": 76.6,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "watch_time_minutes",
+      "value": 51.6,
+      "unit": "minutes",
+      "change_pct": 173.7,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "net_new_followers",
+      "value": 4,
+      "unit": "count",
+      "change_pct": 100.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "views_from_followers_pct",
+      "value": 47.7,
+      "unit": "percent",
+      "change_pct": 10.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "conversations_started",
+      "value": 0,
+      "unit": "count",
+      "change_pct": 0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "followers",
+      "value": 44,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "posts_total",
+      "value": 103,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "views",
+      "value": 909,
+      "unit": "count",
+      "change_pct": 80.7,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "reach",
+      "value": 196,
+      "unit": "count",
+      "change_pct": 71.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "reach_from_followers",
+      "value": 21,
+      "unit": "count",
+      "change_pct": 110.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "reach_from_non_followers",
+      "value": 176,
+      "unit": "count",
+      "change_pct": 67.6,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "interactions",
+      "value": 66,
+      "unit": "count",
+      "change_pct": 842.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "views_from_followers_pct",
+      "value": 53.1,
+      "unit": "percent",
+      "change_pct": 0.6,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "views_28d",
+      "value": 28,
+      "unit": "count",
+      "change_pct": 155.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "watch_time_hours",
+      "value": 2.4,
+      "unit": "hours",
+      "change_pct": 999,
+      "window": "28d",
+      "note": "YouTube reports >999%, the true figure is higher"
+    },
+    {
+      "channel": "linkedin",
+      "metric": "followers",
+      "value": 58,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "new_followers_30d",
+      "value": 8,
+      "unit": "count",
+      "change_pct": 300.0,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "impressions",
+      "value": 1706,
+      "unit": "count",
+      "change_pct": 44.7,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "reactions",
+      "value": 65,
+      "unit": "count",
+      "change_pct": 7.1,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "comments",
+      "value": 0,
+      "unit": "count",
+      "change_pct": 0,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "reposts",
+      "value": 2,
+      "unit": "count",
+      "change_pct": 0,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "page_views",
+      "value": 47,
+      "unit": "count",
+      "change_pct": 123.8,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "unique_visitors",
+      "value": 22,
+      "unit": "count",
+      "change_pct": 69.2,
+      "window": "30d",
+      "note": ""
+    }
+  ],
+  "insights": [
+    {
+      "level": "good",
+      "vi": "<b>Facebook</b> tăng mạnh nhất: 4.777 lượt xem (+169,7%) và 271 lượt truy cập trang (+411,3%). Phần lớn đến từ bài ngày 3/8 — một bài đạt 668 reach, gấp 3–6 lần các bài còn lại.",
+      "en": "<b>Facebook</b> moved most: 4,777 views (+169.7%) and 271 page visits (+411.3%). Most of it traces to the 3 Aug post — 668 reach on its own, three to six times any other post."
+    },
+    {
+      "level": "good",
+      "vi": "<b>LinkedIn</b> hiệu quả nhất trên mỗi follower: 1.706 hiển thị và 8 follower mới (+300%) chỉ với 58 người theo dõi. Đây là kênh B2B đáng đầu tư tiếp.",
+      "en": "<b>LinkedIn</b> works hardest per follower: 1,706 impressions and 8 new followers (+300%) off a base of 58. This is the B2B channel worth pressing."
+    },
+    {
+      "level": "warn",
+      "vi": "<b>Instagram</b> tương tác +842,9% nhưng chỉ từ 7 lên 66 — nền quá nhỏ nên con số phần trăm không nói lên nhiều. Reach 196 vẫn thấp, 90% đến từ người chưa theo dõi.",
+      "en": "<b>Instagram</b> interactions are up 842.9% — but from 7 to 66, so the percentage flatters a tiny base. Reach of 196 is still low, and 90% of it comes from non-followers."
+    }
+  ]
+}
