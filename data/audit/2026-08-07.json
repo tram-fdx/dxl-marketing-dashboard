@@ -70,5 +70,22 @@
       "window": "point",
       "note": "third consecutive clean day"
     }
+  ],
+  "insights": [
+    {
+      "level": "good",
+      "vi": "<b>Điểm tổng 88/100</b>, tăng 5 điểm so với 5/8. Kéo điểm lên là Crawlability 88 → 96 và Structured Data 81 → 87 sau khi trang /articles và 6 trang dự án được sửa.",
+      "en": "<b>Overall score 88/100</b>, five points up on 5 Aug. Crawlability went 88 → 96 and Structured Data 81 → 87 once /articles and the six project pages were fixed."
+    },
+    {
+      "level": "good",
+      "vi": "<b>0 lỗi 4xx/5xx sang ngày thứ ba liên tiếp</b>, 0 timeout, sitemap giữ nguyên 75 URL. Phần kỹ thuật đang ổn định — không còn việc gấp.",
+      "en": "<b>Zero 4xx/5xx errors for a third consecutive day</b>, no timeouts, sitemap steady at 75 URLs. The technical base is stable — nothing urgent outstanding."
+    },
+    {
+      "level": "warn",
+      "vi": "<b>Tốc độ vẫn là điểm yếu còn lại:</b> trung bình 0,86s và chỉ 11/17 trang lõi dưới 1 giây. Trang /articles đã giảm 2,16s → 1,38s nhưng vẫn là trang chậm nhất đáng chú ý.",
+      "en": "<b>Speed is the remaining weak point:</b> 0.86s average and only 11 of 17 core pages under one second. /articles improved from 2.16s to 1.38s but is still the notable laggard."
+    }
   ]
 }
