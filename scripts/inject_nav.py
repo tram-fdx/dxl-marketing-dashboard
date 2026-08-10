@@ -68,7 +68,7 @@ def block(active: str) -> str:
         f'<div class="nt">{tabs}</div>'
         f'<div class="nr"><span class="nd" id="dxlnavDate"></span></div>'
         f"</div>\n"
-        f'<script>fetch("data/index.json").then(r=>r.json()).then(j=>{{'
+        f'<script>fetch("data/index.json",{{cache:"no-store"}}).then(r=>r.json()).then(j=>{{'
         f'var e=document.getElementById("dxlnavDate");'
         f'if(e&&j.latest)e.textContent="Data: "+j.latest;}}).catch(function(){{}});<\\/script>\n'
         f"{END}"

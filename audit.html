@@ -226,7 +226,7 @@ body{padding-top:48px !important}
 .app>.rail{top:48px !important;height:calc(100vh - 48px) !important}
 </style>
 <div id="dxlnav"><a class="nb" href="index.html"><i>DX</i><b>DX Living — Marketing</b></a><div class="nt"><a class="t" href="index.html">Overview</a><a class="t" href="social.html">Social</a><a class="t" href="seo.html">SEO</a><a class="t on" href="audit.html">Website Audit</a></div><div class="nr"><span class="nd" id="dxlnavDate"></span></div></div>
-<script>fetch("data/index.json").then(r=>r.json()).then(j=>{var e=document.getElementById("dxlnavDate");if(e&&j.latest)e.textContent="Data: "+j.latest;}).catch(function(){});</script>
+<script>fetch("data/index.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{var e=document.getElementById("dxlnavDate");if(e&&j.latest)e.textContent="Data: "+j.latest;}).catch(function(){});</script>
 <!--DXLNAV:END-->
 <header class="top">
   <div class="wrap">

@@ -92,7 +92,7 @@ body{padding-top:48px !important}
 .app>.rail{top:48px !important;height:calc(100vh - 48px) !important}
 </style>
 <div id="dxlnav"><a class="nb" href="index.html"><i>DX</i><b>DX Living — Marketing</b></a><div class="nt"><a class="t on" href="index.html">Overview</a><a class="t" href="social.html">Social</a><a class="t" href="seo.html">SEO</a><a class="t" href="audit.html">Website Audit</a></div><div class="nr"><span class="nd" id="dxlnavDate"></span></div></div>
-<script>fetch("data/index.json").then(r=>r.json()).then(j=>{var e=document.getElementById("dxlnavDate");if(e&&j.latest)e.textContent="Data: "+j.latest;}).catch(function(){});</script>
+<script>fetch("data/index.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{var e=document.getElementById("dxlnavDate");if(e&&j.latest)e.textContent="Data: "+j.latest;}).catch(function(){});</script>
 <!--DXLNAV:END-->
 <div class="wrap">
 
@@ -286,7 +286,7 @@ function latestFor(idx, src){
   return null;
 }
 
-fetch('data/index.json')
+fetch('data/index.json', {cache: 'no-store'})
   .then(function(r){ return r.json(); })
   .then(function(idx){
     document.getElementById('asOf').textContent = idx.latest ? ' · ' + idx.latest : '';
@@ -299,7 +299,7 @@ fetch('data/index.json')
                                    '<span class="en">Figures from ' + d + ' — not re-run today.</span>';
       }
       if(!d){ paint('m' + cap, null, PICK[src]); insight('i' + cap, null, PICK[src]); return; }
-      fetch('data/' + src + '/' + d + '.json')
+      fetch('data/' + src + '/' + d + '.json', {cache: 'no-store'})
         .then(function(r){ return r.ok ? r.json() : null; })
         .then(function(snap){ paint('m' + cap, snap, PICK[src]); insight('i' + cap, snap, PICK[src]); })
         .catch(function(){ paint('m' + cap, null, PICK[src]); insight('i' + cap, null, PICK[src]); });
