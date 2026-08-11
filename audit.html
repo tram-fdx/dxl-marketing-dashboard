@@ -293,25 +293,21 @@ body{padding-top:48px !important}
   <div class="kpis">
     <div class="kpi">
       <div class="lbl t" data-vi="Health Score" data-en="Health Score"></div>
-      <div class="score-ring"><div class="val" style="color:var(--accent-dk)">92<span style="font-size:15px;color:var(--muted)">/100</span></div></div>
-      <div class="note t" data-vi="Điểm thô 91,9 · trọng số Crawl 25% · Perf 25% · Schema 20% · On-page 15% · Content 15%" data-en="Raw 91.9 · weights crawl 25% · perf 25% · schema 20% · on-page 15% · content 15%"></div>
-      <div class="delta t" data-vi="Điểm tính từ số đo, không chấm tay. Điểm 88 ngày 07/08 do người chấm nên không so trực tiếp được." data-en="Computed from measurements, not assigned by hand. The 88 recorded on 07 Aug was hand-assigned and is not directly comparable."></div>
-    </div>
-      <div class="note t" data-vi="Điểm thô 91,9 · trọng số Crawl 25% · Perf 25% · Schema 20% · On-page 15% · Content 15%" data-en="Raw 91.9 · weights crawl 25% · perf 25% · schema 20% · on-page 15% · content 15%"></div>
-      <div class="delta t" data-vi="Điểm tính từ số đo, không chấm tay. Điểm 88 ngày 07/08 do người chấm nên không so trực tiếp được." data-en="Computed from measurements, not assigned by hand. The 88 recorded on 07 Aug was hand-assigned and is not directly comparable."></div>
-    </div>
-      <div class="note"><span class="tag green t" data-vi="Tốt — ngày sửa lỗi lớn nhất của chuỗi audit" data-en="Good — the biggest fix day of the audit series"></span></div>
-      <div class="delta up t" data-vi="&#9650; so 07/08: tính lại cùng công thức đo máy, điểm thô 94,2 &#8594; 96,0. Kéo điểm lên là tốc độ — TTFB TB toàn site 0,79s &#8594; 0,68s và số trang &lt;1s tăng 69/76 &#8594; 73/77. <b>Lưu ý:</b> điểm 88 ngày 07/08 do người chấm tay nên không so trực tiếp với 92 ở đây." data-en="&#9650; vs 07 Aug: recomputed on the same measured formula, raw 94.2 &#8594; 96.0. Speed did the work — site-wide average TTFB 0.79s &#8594; 0.68s and pages under 1s from 69/76 to 73/77. <b>Note:</b> the 88 recorded on 07 Aug was assigned by hand and is not directly comparable with 92."></div>
+      <div class="score-ring">
+        <div class="val" style="color:var(--accent-dk)">92<span style="font-size:15px;color:var(--muted)">/100</span></div>
+      </div>
+      <div class="note"><span class="tag green t" data-vi="Điểm thô 91,9 · tính từ số đo, không chấm tay" data-en="Raw 91.9 · computed from measurements, not assigned by hand"></span></div>
+      <div class="delta up t" data-vi="Trọng số: Crawl 25% · Perf 25% · Schema 20% · On-page 15% · Content 15%. Điểm 88 ngày 07/08 do người chấm nên không so trực tiếp với 92 ở đây." data-en="Weights: crawl 25% · perf 25% · schema 20% · on-page 15% · content 15%. The 88 recorded on 07 Aug was hand-assigned and is not directly comparable with 92."></div>
     </div>
     <div class="kpi">
       <div class="lbl t" data-vi="Trang crawl được" data-en="Pages crawled"></div>
       <div class="val" style="color:var(--green)">77</div>
       <div class="note t" data-vi="16 gốc + 55 bài + 6 dự án · 77/77 trả 200" data-en="16 core + 55 articles + 6 projects · 77/77 return 200"></div>
-      <div class="delta t" data-vi="0 timeout · 0 lỗi 4xx/5xx · sitemap 77 URL" data-en="0 timeouts · 0 4xx/5xx errors · sitemap holds 77 URLs"></div>
+      <div class="delta up t" data-vi="0 timeout · 0 lỗi 4xx/5xx · sitemap 77 URL" data-en="0 timeouts · 0 4xx/5xx errors · sitemap holds 77 URLs"></div>
     </div>
     <div class="kpi">
       <div class="lbl t" data-vi="TTFB TB — trang gốc" data-en="Avg TTFB — core"></div>
-      <div class="val" style="color:var(--green)">0,7<span style="font-size:15px">s</span></div>
+      <div class="val" style="color:var(--accent-dk)">0,7<span style="font-size:15px">s</span></div>
       <div class="note t" data-vi="14/16 trang gốc &lt;1s · chậm nhất toàn site <code>/</code> 1,63s" data-en="14 of 16 core pages &lt;1s · slowest site-wide <code>/</code> 1.63s"></div>
       <div class="delta t" data-vi="Đo ngày 11/08/2026, lấy giá trị tốt hơn của hai lần quét." data-en="Measured on 2026-08-11, better of two passes."></div>
     </div>
@@ -364,7 +360,7 @@ body{padding-top:48px !important}
   </div>
 
   <!-- Insights -->
-  <h2 class="sec t" data-vi="Hướng đi &amp; Insight ưu tiên" data-en="Direction &amp; Priority insights"></h2><div class="card t" style="border-left:4px solid #c99a3f;margin-bottom:18px" data-vi="<b>Đọc kỹ phần này.</b> Toàn bộ <b>số đo, bảng 77 trang, KPI và biểu đồ ở trên</b> là của lần quét <b>11/08/2026</b>. Phần <b>phân tích bằng chữ bên dưới</b> vẫn là nhận định viết cho lần quét <b>07/08</b> — một số chi tiết đã cũ (vd. &quot;74/76 trang có schema&quot; nay là 76/77). Nhận định mới nhất theo số hôm nay nằm ở khối <b>Nhận định</b> trên trang Overview." data-en="<b>Read this first.</b> Every <b>measurement, the 77-page table, the KPIs and the charts above</b> come from the <b>2026-08-11</b> crawl. The <b>written analysis below</b> is still the commentary composed for the <b>07 Aug</b> run — some details are out of date (for example &quot;74 of 76 pages have schema&quot; is now 76 of 77). The current reading of today&#39;s numbers is in the <b>Insight</b> block on the Overview page."></div>
+  <h2 class="sec t" data-vi="Hướng đi &amp; Insight ưu tiên" data-en="Direction &amp; Priority insights"></h2>
 
   <div class="ins win">
     <div class="prio t" data-vi="✓ ĐÃ SỬA HÔM NAY · lỗi P2 gấp nhất đã xong" data-en="✓ FIXED TODAY · the most urgent P2 is cleared"></div>
