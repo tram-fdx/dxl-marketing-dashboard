@@ -11,6 +11,7 @@ unless --force is passed, so history cannot be quietly rewritten.
 import argparse
 import json
 import pathlib
+import re
 import shutil
 import sys
 
@@ -94,6 +95,7 @@ def main() -> None:
         fh.write("\n")
 
     write_source_indexes(repo, idx)
+    localise_archive(repo, date)
     print(f"\nfrozen. latest = {idx['latest']}")
 
 
@@ -110,6 +112,56 @@ def fix_archive_nav(dest):
             continue
         head = head.replace('href="index.html"', 'href="../../index.html"')
         path.write_text(head + sep + rest, encoding="utf-8")
+
+
+def localise_archive(repo, date):
+    """Make a frozen day's date picker work from inside archive/<date>/.
+
+    The pages fetch `data/index-<source>.json` relative to themselves. One
+    folder down that 404s, every picker collapses to a single dead chip, and the
+    day you just opened becomes a dead end.
+
+    Rather than rewrite each page's navigation code — three different
+    implementations — give the folder its own manifest whose paths are already
+    relative to it. The pages then need no changes beyond the links that mean
+    "back to live".
+    """
+    dest = repo / "archive" / date
+    idx = load_index(repo)
+    (dest / "data").mkdir(parents=True, exist_ok=True)
+
+    for source in SOURCES:
+        snaps = [
+            {
+                "date": s["date"],
+                # from archive/<date>/ : sibling day is ../<d>/, repo data is ../../data/
+                "data": f"../../data/{source}/{s['date']}.json",
+                "report": f"../{s['date']}/{source}.html",
+                "label_vi": s.get("label_vi", ""),
+                "label_en": s.get("label_en", ""),
+            }
+            for s in idx["snapshots"]
+            if source in s.get("sources", [])
+        ]
+        with open(dest / "data" / f"index-{source}.json", "w", encoding="utf-8") as fh:
+            json.dump({"site": f"DX Living — {source}", "latest": date, "snapshots": snaps},
+                      fh, ensure_ascii=False, indent=2)
+            fh.write("\n")
+
+    for page, source in (("social.html", "social"), ("seo.html", "seo"), ("audit.html", "audit")):
+        path = dest / page
+        if not path.exists():
+            continue
+        html = path.read_text(encoding="utf-8")
+        # "the latest day" self-link must reach the live page, not this folder
+        html = html.replace(f'return "{page}"', f'return "../../{page}"')
+        html = html.replace(f"return '{page}'", f"return '../../{page}'")
+        html = html.replace('href="history.html"', 'href="../../history.html"')
+        html = html.replace("'history.html?", "'../../history.html?")
+        # audit.html decides "the day you are on" from a constant
+        html = re.sub(r"const PK_TODAY = '[^']*'", f"const PK_TODAY = '{date}'", html)
+        path.write_text(html, encoding="utf-8")
+    print(f"  archive/{date}/data/: manifests written, links localised")
 
 
 def write_source_indexes(repo, idx):

@@ -408,7 +408,7 @@ const dpISO=dt=>dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"
 const dpSnap=iso=>DPI?DPI.snapshots.find(x=>x.date===iso):null;
 function dpTarget(iso){
   if(!DPI)return null;
-  if(iso===DPI.latest)return "social.html";
+  if(iso===DPI.latest)return "../../social.html";
   const s=dpSnap(iso); if(!s)return null;
   return s.report?s.report:("history.html?day="+iso);
 }
@@ -419,7 +419,7 @@ function dpRenderMeta(){
     '<span class="mtag on">✓ Facebook</span><span class="mtag on">✓ Instagram</span>'+
     '<span class="mtag on">✓ YouTube</span><span class="mtag on">✓ LinkedIn</span>'+
     '<span class="mtag">'+DPT.updated[lang](dpFmt(cur))+'</span>'+
-    '<a class="mtag hist" href="history.html">'+DPT.histLink[lang]+'</a>';
+    '<a class="mtag hist" href="../../history.html">'+DPT.histLink[lang]+'</a>';
 }
 function dpRenderQuick(){
   if(!DPI)return;

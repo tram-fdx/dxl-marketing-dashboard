@@ -123,6 +123,10 @@ BƯỚC 6 — Kiểm tra trước khi push
 - `data/index.json` có `<NEW_DATE>` và `latest = <NEW_DATE>`.
 - `data/index-social.json`, `-seo`, `-audit` đều có ngày mới (trừ mảng không đọc được).
 - Mọi đường dẫn trong manifest đều tồn tại thật.
+- `archive/<NEW_DATE>/data/index-social.json`, `-seo`, `-audit` phải tồn tại.
+  Mở thử `archive/<NEW_DATE>/audit.html`: bộ chọn ngày phải hiện ĐỦ các ngày.
+  Chỉ còn một chip nghĩa là manifest riêng của thư mục archive chưa được ghi —
+  trang đang fetch `data/index-*.json` lệch một cấp và rơi vào nhánh dự phòng.
 - Năm file HTML còn khối `DXLNAV`.
 
 ─────────────────────────────
