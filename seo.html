@@ -896,7 +896,7 @@ body{padding-top:48px !important}
     const rows = daysIn(from, to);
     if (rows.length === 1){
       const r = rows[0];
-      if (r.date === LATEST) return 'index.html';
+      if (r.date === LATEST) return 'seo.html';
       if (r.report) return r.report;
       return 'history.html?day=' + r.date;
     }
@@ -943,7 +943,7 @@ body{padding-top:48px !important}
       const from = DRAFT.from, to = DRAFT.to || DRAFT.from;
       if (!countIn(from, to)) return;
       const url = targetFor(from, to);
-      if (url === 'index.html'){
+      if (url === 'seo.html'){
         /* already here — say so instead of reloading the same page */
         SEL = {from: LATEST, to: LATEST, preset: 'custom'};
         renderBar(); openPanel(false); return;

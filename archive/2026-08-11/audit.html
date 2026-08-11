@@ -616,7 +616,7 @@ document.querySelectorAll('.filter-btn').forEach(b=>{
 
 /* ================= date picker v2 (sample-matched) ================= */
 const PK_BASE  = '';
-const PK_TODAY = '2026-08-07';
+const PK_TODAY = '2026-08-11';
 let PK_SNAPS = [], PK_MAP = {}, PK_VIEW = null;
 let PK_SEL = {s:PK_TODAY, e:PK_TODAY}, PK_DRAFT = {s:PK_TODAY, e:PK_TODAY}, PK_PENDING = false, PK_PRESET = null;
 
@@ -780,7 +780,7 @@ function pkTrend(s,e){
          <span class="tlink" data-h="${r.rep}">${pkL().open} &#8594;</span></div>`).join('');
      box.classList.add('on');
      box.querySelectorAll('.tlink').forEach(a=>a.addEventListener('click',()=>{
-       const h=a.dataset.h; if(h && h!=='index.html') location.href=PK_BASE+h;
+       const h=a.dataset.h; if(h && h!=='audit.html') location.href=PK_BASE+h;
      }));
    });
 }
@@ -817,7 +817,7 @@ function pkRender(){ pkRenderPresets(); pkRenderCal(); pkRenderQuick(); pkRender
     PK_SNAPS.forEach(s=>PK_MAP[s.date]=s);
     pkRender();
   }).catch(()=>{
-    PK_SNAPS=[{date:PK_TODAY,report:'index.html',data:'data/'+PK_TODAY+'.json',label_vi:'Bản hiện tại',label_en:'Current report'}];
+    PK_SNAPS=[{date:PK_TODAY,report:'audit.html',data:'data/'+PK_TODAY+'.json',label_vi:'Bản hiện tại',label_en:'Current report'}];
     PK_SNAPS.forEach(s=>PK_MAP[s.date]=s); pkRender();
   });
 })();

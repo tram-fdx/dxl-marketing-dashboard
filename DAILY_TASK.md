@@ -107,7 +107,9 @@ BƯỚC 5 — Dựng lại và đóng băng
 ```bash
 cd /tmp/mktrepo
 python3 scripts/build_csv.py   --repo .
-python3 scripts/patch_pages.py --repo .
+python3 scripts/patch_pages.py --repo . --date <NEW_DATE>   # BẮT BUỘC có --date:
+#   nó dập PK_TODAY vào audit.html. Quên thì bộ chọn ngày tưởng trang là bản cũ,
+#   chip ngày cũ bấm không ăn và chip ngày mới nhảy sang bản archive y hệt.
 python3 scripts/inject_nav.py  --repo .
 python3 scripts/freeze_day.py  --repo . --date <NEW_DATE> \
     --label-vi "<tóm tắt 1 dòng>" --label-en "<one-line summary>" --dry-run
