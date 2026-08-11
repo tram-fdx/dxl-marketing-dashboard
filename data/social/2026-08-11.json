@@ -1,0 +1,280 @@
+{
+  "date": "2026-08-11",
+  "source": "social",
+  "provenance": "read live in Chrome on 11 Aug 2026; Meta and YouTube report the 28 days to 9 Aug, LinkedIn the 30 days to 9 Aug",
+  "window": {
+    "vi": "28 ngày: 13/7 – 9/8/2026 (LinkedIn: 11/7 – 9/8)",
+    "en": "28 days: 13 Jul – 9 Aug 2026 (LinkedIn: 11 Jul – 9 Aug)"
+  },
+  "metrics": [
+    {
+      "channel": "facebook",
+      "metric": "followers",
+      "value": 115,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "views",
+      "value": 4827,
+      "unit": "count",
+      "change_pct": 172.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "viewers",
+      "value": 446,
+      "unit": "count",
+      "change_pct": 50.7,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "visits",
+      "value": 274,
+      "unit": "count",
+      "change_pct": 407.4,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "interactions",
+      "value": 170,
+      "unit": "count",
+      "change_pct": 146.4,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "video_3s",
+      "value": 112,
+      "unit": "count",
+      "change_pct": 72.3,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "watch_time_minutes",
+      "value": 51.3,
+      "unit": "minutes",
+      "change_pct": 168.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "net_new_followers",
+      "value": 4,
+      "unit": "count",
+      "change_pct": 100.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "views_from_followers_pct",
+      "value": 47.3,
+      "unit": "percent",
+      "change_pct": 11.5,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "facebook",
+      "metric": "conversations_started",
+      "value": 0,
+      "unit": "count",
+      "change_pct": 0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "followers",
+      "value": 44,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "posts_total",
+      "value": 103,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "views",
+      "value": 907,
+      "unit": "count",
+      "change_pct": 79.2,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "reach",
+      "value": 196,
+      "unit": "count",
+      "change_pct": 70.4,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "reach_from_followers",
+      "value": 21,
+      "unit": "count",
+      "change_pct": 90.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "reach_from_non_followers",
+      "value": 176,
+      "unit": "count",
+      "change_pct": 67.6,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "interactions",
+      "value": 66,
+      "unit": "count",
+      "change_pct": 842.9,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "instagram",
+      "metric": "views_from_followers_pct",
+      "value": 53.1,
+      "unit": "percent",
+      "change_pct": 0.3,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "views_28d",
+      "value": 28,
+      "unit": "count",
+      "change_pct": 155.0,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "youtube",
+      "metric": "watch_time_hours",
+      "value": 2.4,
+      "unit": "hours",
+      "change_pct": 999,
+      "window": "28d",
+      "note": "YouTube reports >999%, the true figure is higher"
+    },
+    {
+      "channel": "linkedin",
+      "metric": "followers",
+      "value": 58,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "new_followers_30d",
+      "value": 8,
+      "unit": "count",
+      "change_pct": 300.0,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "impressions",
+      "value": 1678,
+      "unit": "count",
+      "change_pct": 40.2,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "reactions",
+      "value": 64,
+      "unit": "count",
+      "change_pct": 7.2,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "comments",
+      "value": 0,
+      "unit": "count",
+      "change_pct": 0,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "reposts",
+      "value": 2,
+      "unit": "count",
+      "change_pct": 0,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "page_views",
+      "value": 47,
+      "unit": "count",
+      "change_pct": 123.8,
+      "window": "30d",
+      "note": ""
+    },
+    {
+      "channel": "linkedin",
+      "metric": "unique_visitors",
+      "value": 22,
+      "unit": "count",
+      "change_pct": 69.2,
+      "window": "30d",
+      "note": ""
+    }
+  ],
+  "insights": [
+    {
+      "level": "warn",
+      "vi": "<b>Cả bốn kênh đứng yên so với hôm qua.</b> Cửa sổ 28 ngày trượt thêm một ngày nhưng FB views chỉ 4.777 → 4.827, IG và YouTube không đổi một con số nào. Không có bài mới nào được đăng từ 7/8.",
+      "en": "<b>All four channels are flat against yesterday.</b> The 28-day window rolled forward a day, yet Facebook views moved only 4,777 → 4,827 and Instagram and YouTube did not shift at all. Nothing new has been published since 7 Aug."
+    },
+    {
+      "level": "warn",
+      "vi": "<b>LinkedIn bắt đầu hạ nhiệt:</b> impressions 1.706 → 1.678 và mức tăng so kỳ trước tụt từ +44,7% xuống +40,2%. Bài ngày 3/8 đã hết đà — kênh mạnh nhất đang cần bài mới.",
+      "en": "<b>LinkedIn is cooling:</b> impressions slipped 1,706 → 1,678 and the gain against the prior period eased from +44.7% to +40.2%. The 3 Aug post has spent its run — the strongest channel needs fresh material."
+    },
+    {
+      "level": "bad",
+      "vi": "<b>Bốn ngày không đăng bài.</b> Đây là nguyên nhân chung của cả hai điểm trên. Meta trả số trễ 2 ngày nên khoảng lặng này sẽ còn hiện rõ hơn trong số liệu vài ngày tới.",
+      "en": "<b>Four days without a post.</b> That single fact explains both points above. Meta reports on a two-day lag, so this quiet stretch will show up more sharply in the numbers over the next few days."
+    }
+  ]
+}

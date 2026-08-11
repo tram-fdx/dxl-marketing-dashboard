@@ -1,6 +1,6 @@
 {
   "site": "DX Living — social",
-  "latest": "2026-08-10",
+  "latest": "2026-08-11",
   "snapshots": [
     {
       "date": "2026-08-07",
@@ -15,6 +15,13 @@
       "report": "archive/2026-08-10/social.html",
       "label_vi": "FB views 4.777 (+170%) · AI citations lần đầu đo được · audit: 77 trang, TTFB 0,79→0,68s",
       "label_en": "FB views 4,777 (+170%) · first measurable AI citations · audit: 77 pages, TTFB 0.79→0.68s"
+    },
+    {
+      "date": "2026-08-11",
+      "data": "data/social/2026-08-11.json",
+      "report": "archive/2026-08-11/social.html",
+      "label_vi": "4 ngày không đăng bài — social đứng yên · CTR 5,5%→5,3% · audit TTFB 0,68→0,64s",
+      "label_en": "Four days without a post — social flat · CTR 5.5%→5.3% · audit TTFB 0.68→0.64s"
     }
   ]
 }

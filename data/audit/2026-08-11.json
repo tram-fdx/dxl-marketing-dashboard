@@ -1,0 +1,123 @@
+{
+  "date": "2026-08-11",
+  "source": "audit",
+  "provenance": "live crawl of dxliving.com sitemap, each URL fetched twice and the better TTFB kept. Sub-scores are recomputed from measured ratios with the weights printed on the dashboard (crawl 25 / perf 25 / schema 20 / on-page 15 / content 15) — the 7 Aug sub-scores were assigned by hand, so compare the measured inputs rather than the composite across those two days.",
+  "window": {
+    "vi": "Lần quét ngày 2026-08-11",
+    "en": "Crawl of 2026-08-11"
+  },
+  "metrics": [
+    {
+      "channel": "site",
+      "metric": "overall_score",
+      "value": 92,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": "raw 91.9"
+    },
+    {
+      "channel": "site",
+      "metric": "pages_crawled",
+      "value": 77,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "avg_load_time",
+      "value": 0.64,
+      "unit": "seconds",
+      "change_pct": null,
+      "window": "point",
+      "note": "74/77 pages under 1s; slowest 1.63s"
+    },
+    {
+      "channel": "site",
+      "metric": "crawlability",
+      "value": 100,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "performance",
+      "value": 96,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "structured_data",
+      "value": 99,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": "76/77 pages carry JSON-LD"
+    },
+    {
+      "channel": "site",
+      "metric": "on_page",
+      "value": 67,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "content",
+      "value": 87,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": "10 pages under 300 words"
+    },
+    {
+      "channel": "site",
+      "metric": "errors_4xx_5xx",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "site",
+      "metric": "articles",
+      "value": 55,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "average 2202 words"
+    }
+  ],
+  "insights": [
+    {
+      "level": "good",
+      "vi": "<b>Tốc độ tiếp tục nhích lên:</b> TTFB trung bình toàn site 0,68s → 0,64s và số trang dưới 1 giây tăng 73 → 74/77. Performance là điểm thành phần duy nhất còn cải thiện.",
+      "en": "<b>Speed edged up again:</b> site-wide average TTFB 0.68s → 0.64s and pages under one second rose from 73 to 74 of 77. Performance is the only sub-score still moving."
+    },
+    {
+      "level": "good",
+      "vi": "<b>77/77 trang trả 200</b>, 0 timeout, 0 lỗi 4xx/5xx sang ngày thứ hai liên tiếp kể từ lần quét trước. 76/77 trang có JSON-LD, chỉ <code>/start-interactive</code> còn trống.",
+      "en": "<b>All 77 pages return 200</b>, no timeouts and no 4xx/5xx for a second straight crawl. 76 of 77 carry JSON-LD; only <code>/start-interactive</code> is bare."
+    },
+    {
+      "level": "bad",
+      "vi": "<b>Heading vẫn hỏng ở 76/77 trang</b> — không thay đổi so lần quét 10/08. Đây là lỗi giữ On-page ở 67 và là việc đáng làm nhất hiện nay, nhưng chưa ai động vào.",
+      "en": "<b>Headings are still broken on 76 of 77 pages</b> — unchanged since the 10 Aug crawl. This is what holds On-page at 67 and the highest-value fix available, and nobody has touched it."
+    },
+    {
+      "level": "warn",
+      "vi": "<b>Trang chậm nhất xấu đi:</b> 1,39s → 1,63s. Chỉ một trang nên chưa ảnh hưởng điểm, nhưng nếu lần quét sau vẫn tăng thì không còn là nhiễu mạng.",
+      "en": "<b>The slowest page got worse:</b> 1.39s → 1.63s. One page, so the score is unaffected, but if the next crawl shows the same rise it is no longer network noise."
+    }
+  ]
+}

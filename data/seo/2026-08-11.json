@@ -1,0 +1,150 @@
+{
+  "date": "2026-08-11",
+  "source": "seo",
+  "provenance": "GSC and Ahrefs read live in Chrome on 11 Aug 2026; GA4 not re-read, collection has been faulty since ~29 Jul",
+  "window": {
+    "vi": "GSC: 28 ngày tới 8/8/2026 · Ahrefs: số tại thời điểm 11/8",
+    "en": "GSC: 28 days to 8 Aug 2026 · Ahrefs: as at 11 Aug"
+  },
+  "metrics": [
+    {
+      "channel": "gsc",
+      "metric": "clicks",
+      "value": 72,
+      "unit": "count",
+      "change_pct": null,
+      "window": "28d",
+      "note": "74 ngày 10/8 / was 74 on 10 Aug"
+    },
+    {
+      "channel": "gsc",
+      "metric": "impressions",
+      "value": 1370,
+      "unit": "count",
+      "change_pct": null,
+      "window": "28d",
+      "note": "GSC hiển thị 1.37K — đã làm tròn / GSC displays 1.37K, rounded"
+    },
+    {
+      "channel": "gsc",
+      "metric": "ctr",
+      "value": 5.3,
+      "unit": "percent",
+      "change_pct": null,
+      "window": "28d",
+      "note": "5.5% ngày 10/8 / was 5.5% on 10 Aug"
+    },
+    {
+      "channel": "gsc",
+      "metric": "avg_position",
+      "value": 29.4,
+      "unit": "position",
+      "change_pct": null,
+      "window": "28d",
+      "note": ""
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "referring_domains",
+      "value": 397,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "395 ngày 10/8 / was 395 on 10 Aug"
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "backlinks",
+      "value": 404,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "401 ngày 10/8 / was 401 on 10 Aug"
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "domain_rating",
+      "value": 0,
+      "unit": "score",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "ahrefs",
+      "metric": "organic_keywords",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "ai",
+      "metric": "chatgpt_responses",
+      "value": 10,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "3 trang được trích / 3 pages cited"
+    },
+    {
+      "channel": "ai",
+      "metric": "copilot_responses",
+      "value": 8,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": "2 trang được trích / 2 pages cited"
+    },
+    {
+      "channel": "ai",
+      "metric": "ai_overview_responses",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "ai",
+      "metric": "gemini_responses",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    },
+    {
+      "channel": "ai",
+      "metric": "perplexity_responses",
+      "value": 0,
+      "unit": "count",
+      "change_pct": null,
+      "window": "point",
+      "note": ""
+    }
+  ],
+  "insights": [
+    {
+      "level": "good",
+      "vi": "<b>Backlink vẫn chảy đều:</b> referring domains 395 → 397, backlinks 401 → 404. Ba ngày liên tiếp tăng, nhưng Domain Rating vẫn đứng 0 — link đến từ nguồn không có sức nặng.",
+      "en": "<b>Backlinks keep arriving:</b> referring domains 395 → 397, backlinks 401 → 404. Three consecutive days of growth, yet Domain Rating holds at 0 — the links carry no weight."
+    },
+    {
+      "level": "warn",
+      "vi": "<b>CTR giảm 5,5% → 5,3%</b> trong khi impressions tăng 1,34K → 1,37K và clicks giảm 74 → 72. Site đang xuất hiện nhiều hơn nhưng được bấm ít hơn — dấu hiệu title/meta chưa khớp truy vấn.",
+      "en": "<b>CTR fell 5.5% → 5.3%</b> while impressions rose 1.34K → 1.37K and clicks dropped 74 → 72. The site is surfacing more but being clicked less — a sign the titles and meta descriptions do not match the queries."
+    },
+    {
+      "level": "info",
+      "vi": "<b>AI citations giữ nguyên:</b> ChatGPT 10 câu trả lời / 3 trang, Copilot 8 / 2. Gemini, Perplexity và AI Overviews vẫn bằng 0 — chưa lan sang nền tảng nào khác.",
+      "en": "<b>AI citations are unchanged:</b> ChatGPT 10 responses across 3 pages, Copilot 8 across 2. Gemini, Perplexity and AI Overviews remain at zero — nothing has spread to another platform yet."
+    },
+    {
+      "level": "warn",
+      "vi": "<b>GA4 vẫn chưa đọc lại</b> — lỗi thu thập từ ~29/7 chưa được xác nhận đã sửa. Đây là việc cần xử lý trước khi báo cáo tháng.",
+      "en": "<b>GA4 still has not been re-read</b> — the collection fault from ~29 Jul is unconfirmed as fixed. This needs resolving before the monthly report."
+    }
+  ]
+}

@@ -109,3 +109,54 @@ date,source,channel,metric,value,unit,change_pct,window,note
 2026-08-10,social,linkedin,unique_visitors,22,count,69.2,30d,
 2026-08-10,social,youtube,views_28d,28,count,155.0,28d,
 2026-08-10,social,youtube,watch_time_hours,2.4,hours,999,28d,"YouTube reports >999%, the true figure is higher"
+2026-08-11,audit,site,articles,55,count,,point,average 2202 words
+2026-08-11,audit,site,avg_load_time,0.64,seconds,,point,74/77 pages under 1s; slowest 1.63s
+2026-08-11,audit,site,content,87,score,,point,10 pages under 300 words
+2026-08-11,audit,site,crawlability,100,score,,point,
+2026-08-11,audit,site,errors_4xx_5xx,0,count,,point,
+2026-08-11,audit,site,on_page,67,score,,point,
+2026-08-11,audit,site,overall_score,92,score,,point,raw 91.9
+2026-08-11,audit,site,pages_crawled,77,count,,point,
+2026-08-11,audit,site,performance,96,score,,point,
+2026-08-11,audit,site,structured_data,99,score,,point,76/77 pages carry JSON-LD
+2026-08-11,seo,ahrefs,backlinks,404,count,,point,401 ngày 10/8 / was 401 on 10 Aug
+2026-08-11,seo,ahrefs,domain_rating,0,score,,point,
+2026-08-11,seo,ahrefs,organic_keywords,0,count,,point,
+2026-08-11,seo,ahrefs,referring_domains,397,count,,point,395 ngày 10/8 / was 395 on 10 Aug
+2026-08-11,seo,ai,ai_overview_responses,0,count,,point,
+2026-08-11,seo,ai,chatgpt_responses,10,count,,point,3 trang được trích / 3 pages cited
+2026-08-11,seo,ai,copilot_responses,8,count,,point,2 trang được trích / 2 pages cited
+2026-08-11,seo,ai,gemini_responses,0,count,,point,
+2026-08-11,seo,ai,perplexity_responses,0,count,,point,
+2026-08-11,seo,gsc,avg_position,29.4,position,,28d,
+2026-08-11,seo,gsc,clicks,72,count,,28d,74 ngày 10/8 / was 74 on 10 Aug
+2026-08-11,seo,gsc,ctr,5.3,percent,,28d,5.5% ngày 10/8 / was 5.5% on 10 Aug
+2026-08-11,seo,gsc,impressions,1370,count,,28d,"GSC hiển thị 1.37K — đã làm tròn / GSC displays 1.37K, rounded"
+2026-08-11,social,facebook,conversations_started,0,count,0,28d,
+2026-08-11,social,facebook,followers,115,count,,point,
+2026-08-11,social,facebook,interactions,170,count,146.4,28d,
+2026-08-11,social,facebook,net_new_followers,4,count,100.0,28d,
+2026-08-11,social,facebook,video_3s,112,count,72.3,28d,
+2026-08-11,social,facebook,viewers,446,count,50.7,28d,
+2026-08-11,social,facebook,views,4827,count,172.9,28d,
+2026-08-11,social,facebook,views_from_followers_pct,47.3,percent,11.5,28d,
+2026-08-11,social,facebook,visits,274,count,407.4,28d,
+2026-08-11,social,facebook,watch_time_minutes,51.3,minutes,168.9,28d,
+2026-08-11,social,instagram,followers,44,count,,point,
+2026-08-11,social,instagram,interactions,66,count,842.9,28d,
+2026-08-11,social,instagram,posts_total,103,count,,point,
+2026-08-11,social,instagram,reach,196,count,70.4,28d,
+2026-08-11,social,instagram,reach_from_followers,21,count,90.9,28d,
+2026-08-11,social,instagram,reach_from_non_followers,176,count,67.6,28d,
+2026-08-11,social,instagram,views,907,count,79.2,28d,
+2026-08-11,social,instagram,views_from_followers_pct,53.1,percent,0.3,28d,
+2026-08-11,social,linkedin,comments,0,count,0,30d,
+2026-08-11,social,linkedin,followers,58,count,,point,
+2026-08-11,social,linkedin,impressions,1678,count,40.2,30d,
+2026-08-11,social,linkedin,new_followers_30d,8,count,300.0,30d,
+2026-08-11,social,linkedin,page_views,47,count,123.8,30d,
+2026-08-11,social,linkedin,reactions,64,count,7.2,30d,
+2026-08-11,social,linkedin,reposts,2,count,0,30d,
+2026-08-11,social,linkedin,unique_visitors,22,count,69.2,30d,
+2026-08-11,social,youtube,views_28d,28,count,155.0,28d,
+2026-08-11,social,youtube,watch_time_hours,2.4,hours,999,28d,"YouTube reports >999%, the true figure is higher"
