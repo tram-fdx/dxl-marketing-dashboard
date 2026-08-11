@@ -85,7 +85,9 @@ def rows(pages, grp):
 
 
 def avg_s(ps):
-    return round(sum(p["rt"] for p in ps) / len(ps) / 1000, 2) if ps else 0
+    """Seconds to two decimals as a string — 0.70 must not render as 0.7
+    beside a sibling card showing 0.64."""
+    return f"{sum(p['rt'] for p in ps) / len(ps) / 1000:.2f}" if ps else "0.00"
 
 
 def main():
@@ -108,7 +110,7 @@ def main():
     core_fast = sum(1 for p in core_p if p["rt"] < 1000)
     art_fast = sum(1 for p in art_p if p["rt"] < 1000)
     slow = max(pages, key=lambda p: p["rt"])
-    site_avg = round(sum(p["rt"] for p in pages) / n / 1000, 2)
+    site_avg = f"{sum(p['rt'] for p in pages) / n / 1000:.2f}"
     raw = (m["overall_score"].get("note") or "").replace("raw ", "")
     d, dv = a.date, "/".join(reversed(a.date.split("-")))
     home = next(p["schema"] for p in pages if p["url"] == "/")
@@ -141,8 +143,8 @@ def main():
             (f"0 timeout · 0 lỗi 4xx/5xx · sitemap {n} URL",
              f"0 timeouts · 0 4xx/5xx errors · sitemap holds {n} URLs")),
         2: (f'{fmt_vi(core_avg)}<span style="font-size:15px">s</span>',
-            (f"{core_fast}/{len(core_p)} trang gốc &lt;1s · chậm nhất toàn site <code>{esc(slow['url'])}</code> {fmt_vi(round(slow['rt']/1000,2))}s",
-             f"{core_fast} of {len(core_p)} core pages &lt;1s · slowest site-wide <code>{esc(slow['url'])}</code> {round(slow['rt']/1000,2)}s"),
+            (f"{core_fast}/{len(core_p)} trang gốc &lt;1s · chậm nhất toàn site <code>{esc(slow['url'])}</code> {fmt_vi(f"{slow['rt']/1000:.2f}")}s",
+             f"{core_fast} of {len(core_p)} core pages &lt;1s · slowest site-wide <code>{esc(slow['url'])}</code> {slow['rt']/1000:.2f}s"),
             measured),
         3: (f'{fmt_vi(art_avg)}<span style="font-size:15px">s</span>',
             (f"Toàn bộ {len(art_p)} bài · <b>{art_fast}/{len(art_p)} bài &lt;1s</b>",
