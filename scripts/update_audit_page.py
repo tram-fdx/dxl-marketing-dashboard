@@ -110,6 +110,7 @@ def main():
     core_fast = sum(1 for p in core_p if p["rt"] < 1000)
     art_fast = sum(1 for p in art_p if p["rt"] < 1000)
     slow = max(pages, key=lambda p: p["rt"])
+    slow_s = f"{slow['rt'] / 1000:.2f}"  # bound here: nesting this f-string inside another breaks on Python 3.9
     site_avg = f"{sum(p['rt'] for p in pages) / n / 1000:.2f}"
     raw = (m["overall_score"].get("note") or "").replace("raw ", "")
     d, dv = a.date, "/".join(reversed(a.date.split("-")))
@@ -143,8 +144,8 @@ def main():
             (f"0 timeout · 0 lỗi 4xx/5xx · sitemap {n} URL",
              f"0 timeouts · 0 4xx/5xx errors · sitemap holds {n} URLs")),
         2: (f'{fmt_vi(core_avg)}<span style="font-size:15px">s</span>',
-            (f"{core_fast}/{len(core_p)} trang gốc &lt;1s · chậm nhất toàn site <code>{esc(slow['url'])}</code> {fmt_vi(f"{slow['rt']/1000:.2f}")}s",
-             f"{core_fast} of {len(core_p)} core pages &lt;1s · slowest site-wide <code>{esc(slow['url'])}</code> {slow['rt']/1000:.2f}s"),
+            (f"{core_fast}/{len(core_p)} trang gốc &lt;1s · chậm nhất toàn site <code>{esc(slow['url'])}</code> {fmt_vi(slow_s)}s",
+             f"{core_fast} of {len(core_p)} core pages &lt;1s · slowest site-wide <code>{esc(slow['url'])}</code> {slow_s}s"),
             measured),
         3: (f'{fmt_vi(art_avg)}<span style="font-size:15px">s</span>',
             (f"Toàn bộ {len(art_p)} bài · <b>{art_fast}/{len(art_p)} bài &lt;1s</b>",
